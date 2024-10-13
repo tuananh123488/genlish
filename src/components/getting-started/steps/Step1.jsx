@@ -12,6 +12,7 @@ const Step1 = ({ setCurrentStep, currentStep }) => {
         phone: '',
         password: '',
         confirmPassword: ''
+
     })
 
     const handleChangeStep = () => {

@@ -28,7 +28,7 @@ const Type4 = ({ question, index }) => {
 
     useEffect(() => {
         if (ready && practiceData.currentQuestion === index) {
-            speakHandler(pronounces[4], question.question)
+            speakHandler(pronounces[4].voiceName, question.question)
         }
     }, [ready, practiceData.currentQuestion])
 

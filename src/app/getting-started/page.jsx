@@ -37,7 +37,14 @@ const GettingStarted = () => {
                     .then(tokens => {
                         globalThis.localStorage.setItem('accessToken', tokens.accessToken)
                         globalThis.localStorage.setItem('refreshToken', tokens.refreshToken)
-                        notifyHandler.navigate('/learn')
+                        // notifyHandler.navigate('/learn')
+                        if (authData.user.role === "TEACHER") {
+                            notifyHandler.navigate('/teacher')
+                        }
+                        else {
+                            notifyHandler.navigate('/learn')
+                        }
+
                     })
             } else {
                 setCurrentStep(authData.user.statusSignUp)

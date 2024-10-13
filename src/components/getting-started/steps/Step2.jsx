@@ -43,20 +43,20 @@ const Step2 = ({ setCurrentStep, currentStep }) => {
 
     const handleChangeStep = () => {
         notifyHandler.notify(notifyType.LOADING, 'Đang xác thực')
-        verification.confirm(otp)
-            .then(data => {
-                api({ sendToken: false, type: TypeHTTP.POST, path: '/auth/sign-up-step-other', body: { ...authData.user, statusSignUp: 2 } })
-                    .then(user => {
-                        notifyHandler.notify(notifyType.SUCCESS, 'Xác thực thành công')
-                        authHandler.setUser(user)
-                    })
-                    .catch(error => {
-                        notifyHandler.notify(notifyType.FAIL, error.message)
-                    })
+        // verification.confirm(otp)
+        //     .then(data => {
+        api({ sendToken: false, type: TypeHTTP.POST, path: '/auth/sign-up-step-other', body: { ...authData.user, statusSignUp: 2 } })
+            .then(user => {
+                notifyHandler.notify(notifyType.SUCCESS, 'Xác thực thành công')
+                authHandler.setUser(user)
             })
-            .catch((error) => {
-                notifyHandler.notify(notifyType.FAIL, 'Mã xác minh không đúng')
+            .catch(error => {
+                notifyHandler.notify(notifyType.FAIL, error.message)
             })
+        // })
+        // .catch((error) => {
+        //     notifyHandler.notify(notifyType.FAIL, 'Mã xác minh không đúng')
+        // })
     }
     const handleChangeStepRemove = () => {
         setCurrentStep(prev => prev - 1)

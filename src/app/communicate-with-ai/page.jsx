@@ -49,7 +49,7 @@ const CommunicateWithAI = () => {
         setMessages(prev => [...prev, { speaker: 'i', content: doc }])
         api({ sendToken: false, type: TypeHTTP.POST, path: '/openai/ask', body: { ask: data + (messages.length < 2 ? ' Communicate with me briefly and daily life, No Yapping' : '') } })
             .then(res => {
-                speakHandler(pronounces[3], res)
+                speakHandler(pronounces[1].voiceName, res)
                 setMessages(prev => [...prev, { speaker: 'ai', content: res }])
                 setValue('')
             })

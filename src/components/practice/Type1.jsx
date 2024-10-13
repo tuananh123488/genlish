@@ -33,7 +33,7 @@ const Type1 = ({ question, index }) => {
 
     useEffect(() => {
         if (ready && practiceData.currentQuestion === index) {
-            speakHandler(pronounces[4], question.question.english)
+            speakHandler(pronounces[4].voiceName, question.question.english)
         }
     }, [ready, practiceData.currentQuestion])
 
@@ -47,7 +47,7 @@ const Type1 = ({ question, index }) => {
                         className={`bg-[#1cb0f6] p-[1.5rem] rounded-xl transition-all text-[white] ${isClicked ? 'shadow-2xl shake' : 'shadow-lg'
                             }`}
                         onClick={() => {
-                            speakHandler(pronounces[4], question.question.english)
+                            speakHandler(pronounces[4].voiceName, question.question.english)
                         }}
                     >
                         <i className="fa-solid fa-volume-high text-[60px]"></i>

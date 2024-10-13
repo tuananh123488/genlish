@@ -60,11 +60,11 @@ const FormResult = ({ setWrong }) => {
     const handleCheckAnswer = () => {
         console.log(removeSpecialChars(practiceData.myAnswer.trim().toLowerCase()), removeSpecialChars(practiceData.questions[practiceData.currentQuestion].answer.trim().toLowerCase()))
         if (removeSpecialChars(practiceData.myAnswer.trim().toLowerCase()) === removeSpecialChars(practiceData.questions[practiceData.currentQuestion].answer.trim().toLowerCase())) {
-            speakHandler(pronounces[4], shuffleArray(correctResponses)[0])
+            speakHandler(pronounces[4].voiceName, shuffleArray(correctResponses)[0])
             setStatus(1)
         } else {
             setWrong(prev => prev + 1)
-            speakHandler(pronounces[4], shuffleArray(incorrectResponses)[0])
+            speakHandler(pronounces[4].voiceName, shuffleArray(incorrectResponses)[0])
             setStatus(-1)
         }
     }

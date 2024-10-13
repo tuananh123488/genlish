@@ -53,13 +53,7 @@ const FormSignIn = ({ visible, hidden }) => {
             <div className='shadow-2xl flex flex-col p-[2rem] from-[#ffffffac] to-[#ffffff45] bg-gradient-to-br rounded-[1rem] '>
                 <button onClick={() => hidden()} className='text-[35px] absolute top-3 left-4 text-[#999]'><i className='bx bx-x' ></i></button>
 
-                {/* <div className='flex flex-col items-center gap-3 w-[450px]'>
-                    <span className='font-semibold text-[25px] text-[#262626]'>Đăng nhập</span>
-                    <input value={info.phone} onChange={e => setInfo({ ...info, phone: e.target.value })} className='rounded-lg w-[100%] text-[15px] focus:outline-0 shadow-sm h-[45px] px-[1rem] border-[1px] border-[#e1e1e1]' placeholder='Số Điện Thoại' />
-                    <input value={info.password} onChange={e => setInfo({ ...info, password: e.target.value })} type='password' className='rounded-lg w-[100%] text-[15px] focus:outline-0 shadow-sm h-[45px] px-[1rem] border-[1px] border-[#e1e1e1]' placeholder='Mật Khẩu' />
-                    <button onClick={() => handleSignIn()} className="bg-[#149dff] hover:scale-[1.06] transition-all text-[white] shadow-xl border-[1px] border-[#e4e4e4] font-bold text-[16px] w-[100%] py-[7px] rounded-lg">Đăng Nhập</button>
-                    <button onClick={() => setChange('d')} className='rounded-lg text-[15px] h-[45px] focus:outline-0 hover:scale-[1.05] transition-all bg-red-400 text-white'>Quên mật khẩu?</button>
-                </div> */}
+
                 <h1 className=' my-[0.5rem] mb-[1rem] font-bold text-[28px] font-poppins' >Sign In</h1>
                 <input value={info.phone} onChange={e => setInfo({ ...info, phone: e.target.value })} className='w-[18rem] sm:w-[25rem] focus:scale-[1.03] transition pt-1 text-[15px] focus:outline-0 rounded-[0.5rem] px-[1rem] text-black my-[5px] h-[50px] from-[#ffffffac] to-[#ffffff45] bg-gradient-to-br bg-transparent' placeholder='Số Điện Thoại' />
                 <input value={info.password} onChange={e => setInfo({ ...info, password: e.target.value })} type='password' className='w-[18rem] sm:w-[25rem] focus:scale-[1.03] transition pt-1 text-[15px] focus:outline-0 rounded-[0.5rem] px-[1rem] text-black my-[5px] h-[50px] from-[#ffffffac] to-[#ffffff45] bg-gradient-to-br bg-transparent' placeholder='Mật Khẩu' />

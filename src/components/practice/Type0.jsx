@@ -26,7 +26,7 @@ const Type0 = ({ question, index }) => {
 
     const handleSubmitAnswer = (option) => {
         practiceHandler.setMyAnswer(option)
-        speakHandler(pronounces[4], option)
+        speakHandler(pronounces[4].voiceName, option)
     }
 
     return (

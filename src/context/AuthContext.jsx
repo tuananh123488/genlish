@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const accessToken = globalThis.window.localStorage.getItem('accessToken')
         const refreshToken = globalThis.window.localStorage.getItem('refreshToken')
-        const privateRoutes = ['/learn', '/practice', '/broad-casts', '/communicate-with-ai', '/hoso', '/vocabulary']
+        const privateRoutes = ['/learn', '/practice', '/broad-casts', '/communicate-with-ai', '/hoso', '/vocabulary', '/course', '/teacher']
         if (privateRoutes.includes(pathname)) {
             if (!accessToken || !refreshToken) {
                 notifyHandler.navigate('/')

@@ -43,7 +43,7 @@ const Type2 = ({ question, index }) => {
 
     useEffect(() => {
         if (ready && practiceData.currentQuestion === index) {
-            speakHandler(pronounces[4], question.question.english)
+            speakHandler(pronounces[4].voiceName, question.question.english)
         } else {
             setMyList([])
         }
@@ -88,7 +88,7 @@ const Type2 = ({ question, index }) => {
                             <div key={index} className='text-center h-[45px] cursor-pointer transition-all hover:scale-[1.05]'>
                                 {!myList.map(item => item.english).includes(item) && (
                                     <div style={{ fontWeight: current.english === item ? 'bold' : '500' }} onClick={() => {
-                                        speakHandler(pronounces[3], item)
+                                        speakHandler(pronounces[3].voiceName, item)
                                         setCurrent({ ...current, english: item })
                                     }} className='w-full h-full border-[2px] border-[#e4e4e4] rounded-md flex items-center justify-center'>
                                         {item}
